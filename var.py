@@ -10,6 +10,8 @@ and then multiplying it by the square root of the time horizon and the differenc
 import numpy as np
 
 # Define the investment portfolio and the historical returns
+# update the following arrays as required when I want to check for my portfolio
+
 portfolio = np.array([100000, 50000, 25000, 75000, 125000])
 returns = np.array([0.05, -0.02, 0.03, -0.01, -0.05, 0.02, -0.03, 0.04, 0.01, -0.02])
 
