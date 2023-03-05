@@ -14,8 +14,8 @@ def get_data(stocks, start, end):
     covMatrix = returns.cov()
     return meanReturns, covMatrix
 
-stockList = ['TSLA', 'FSR']
-#stockList = ['TATAELXSI']
+#stockList = ['TSLA', 'FSR']
+stockList = ['TATAELXSI.NS', 'ADANIENT.NS']
 #stocks = [stock + '.NS' for stock in stockList]
 endDate = dt.datetime.now()
 startDate = endDate - dt.timedelta(days=300)
