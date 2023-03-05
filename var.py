@@ -25,5 +25,5 @@ returns_sorted = np.sort(returns)
 portfolio_value = np.dot(portfolio_repeated, returns_sorted[-time_horizon:])
 var = portfolio_value * np.sqrt(time_horizon) * (1 - confidence_level)
 
-print(f"Value at Risk (VaR) is (for {time_horizon} trading days):", var)
+print(f"Value at Risk (VaR) is (for {time_horizon} trading days): {var}")
 
