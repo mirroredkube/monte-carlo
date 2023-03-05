@@ -15,7 +15,7 @@ returns = np.array([0.05, -0.02, 0.03, -0.01, -0.05, 0.02, -0.03, 0.04, 0.01, -0
 
 # Define the confidence level and the time horizon
 confidence_level = 0.95
-time_horizon = 252 # number of trading days in a year
+time_horizon = 252*2 # number of trading days in a year * 2
 
 # Repeat each element in the portfolio array to match the size of the returns array
 portfolio_repeated = np.repeat(portfolio, len(returns)//len(portfolio))
