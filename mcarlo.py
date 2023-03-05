@@ -14,20 +14,19 @@ def get_data(stocks, start, end):
     covMatrix = returns.cov()
     return meanReturns, covMatrix
 
-stockList = ['CBA', 'BHP', 'TLS', 'NAB', 'WBC', 'STO']
-stocks = [stock + '.AX' for stock in stockList]
+stockList = ['TSLA', 'FSR']
 #stockList = ['TATAELXSI']
 #stocks = [stock + '.NS' for stock in stockList]
 endDate = dt.datetime.now()
 startDate = endDate - dt.timedelta(days=300)
 
-meanReturns, covMatrix = get_data(stocks, startDate, endDate)
+meanReturns, covMatrix = get_data(stockList, startDate, endDate)
 
 weights = np.random.random(len(meanReturns))
 weights /= np.sum(weights)
 
 # Monte Carlo Method
-mc_sims = 400 # number of simulations
+mc_sims = 10 # number of simulations
 T = 100 #timeframe in days
 
 meanM = np.full(shape=(T, len(weights)), fill_value=meanReturns)
